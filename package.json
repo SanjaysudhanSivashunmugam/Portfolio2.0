@@ -3,6 +3,7 @@
     "tailwindcss": "^3.4.14"
   },
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
-  }
+  "build": "chmod +x ./node_modules/.bin/tailwindcss && npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+}
+
 }
