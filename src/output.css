@@ -588,8 +588,8 @@ video {
   }
 }
 
-.static {
-  position: static;
+.absolute {
+  position: absolute;
 }
 
 .sticky {
@@ -664,6 +664,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.resize {
+  resize: both;
 }
 
 .grid-cols-2 {
@@ -962,6 +966,55 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+
+.count-particles {
+  position: absolute;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
 .hover\:-translate-y-1:hover {
   --tw-translate-y: -0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1100,5 +1153,9 @@ html {
 
   .md\:pt-14 {
     padding-top: 3.5rem;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 }
