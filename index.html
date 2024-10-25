@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <div id="particles-js"></div> <!-- stats - count particles -->
+    <div class="count-particles">  
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+   
     <nav
         class="hidden uppercase container mx-auto px-24 py-5 md:flex justify-between items-center border-b-[0.01px] border-slate-200 sticky top-0 bg-white">
         <div class="">
@@ -38,13 +42,15 @@
             </ul>
         </div>
     </nav>
-    <nav class="md:hidden container mx-auto px-6 uppercase border-b-[0.01px] border-slate-200 py-5 flex justify-between">
-        <div><h1 class="text-2xl font-semibold">Sanjaysudhan S</h1></div>
+    <nav
+        class="md:hidden container mx-auto px-6 uppercase border-b-[0.01px] border-slate-200 py-5 flex justify-between">
+        <div>
+            <h1 class="text-2xl font-semibold">Sanjaysudhan S</h1>
+        </div>
         <div class="ms-0">
-            <button
-                    class="px-3 py-2 rounded-3xl bg-blue-500 hover:bg-indigo-500">
-                    Resume
-                </button>
+            <button class="px-3 py-2 rounded-3xl bg-blue-500 hover:bg-indigo-500">
+                Resume
+            </button>
         </div>
     </nav>
     <!-- Hero -->
@@ -88,7 +94,7 @@
             </div>
             <div class="sm:flex sm:justify-center ">
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-7 md:gap-x-32 md:gap-y-10  md:pe-12 sm:ps-12">
-                    <div ><img src="./src/assets/java.png" class="w-32 h-32" alt=""></div>
+                    <div><img src="./src/assets/java.png" class="w-32 h-32" alt=""></div>
                     <div><img src="./src/assets/html.png" class="w-32 h-32" alt=""></div>
                     <div><img src="./src/assets/css.png" class="w-32 h-32" alt=""></div>
                     <div><img src="./src/assets/javascript.png" class="w-32 h-32" alt=""></div>
@@ -215,9 +221,15 @@
             </div>
         </div>
     </section>
+</div>
     <footer class="text-center py-3 container mx-auto bg-slate-300">
         <p>Copyright: 2024. Desingned and Developed By Sanjaysudhan S ❤️</p>
     </footer>
 </body>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script>
+    particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#000000"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#000000","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"window","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+</script>
 
 </html>
