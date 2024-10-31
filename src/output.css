@@ -588,10 +588,6 @@ video {
   }
 }
 
-.absolute {
-  position: absolute;
-}
-
 .sticky {
   position: sticky;
 }
@@ -664,10 +660,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.resize {
-  resize: both;
 }
 
 .grid-cols-2 {
